@@ -1,31 +1,50 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Module>
-  <Name value="$modulename$" />
-  <Id value="$modulename$" />
-  <Version value="v$version$" />
-  <Official value="false" />
-  <DefaultModule value="false" />
-  <SingleplayerModule value="true" />
-  <MultiplayerModule value="false" />
-  <DependedModules>
-    <DependedModule Id="Bannerlord.Harmony" />
-    <DependedModule Id="Native" />
-    <DependedModule Id="SandBoxCore" />
-    <DependedModule Id="Sandbox" />
-    <DependedModule Id="StoryMode" />
-    <DependedModule Id="CustomBattle" />
-  </DependedModules>
-  <SubModules>
-    <SubModule>
-      <Name value="$modulename$" />
-      <DLLName value="$modulename$.dll" />
-      <SubModuleClassType value="$modulename$.SubModule" />
-      <Tags />
-    </SubModule>
-  </SubModules>
+﻿	<Module>
+		<Name value="$modulename$" />
+		<Id value="$modulename$" />
+		<Version value="v$version$" />
+		<Official value="false" />
+		<DefaultModule value="false" />
+		<SingleplayerModule value="true" />
+		<MultiplayerModule value="false" />
+		<DependedModules>
+			<DependedModule Id="Bannerlord.Harmony" />
+			<DependedModule Id="Native" />
+			<DependedModule Id="SandBoxCore" />
+			<DependedModule Id="Sandbox" />
+			<DependedModule Id="StoryMode" />
+			<DependedModule Id="CustomBattle" />
+		</DependedModules>
+		<SubModules>
+			<SubModule>
+				<Name value="$modulename$" />
+				<DLLName value="$modulename$.dll" />
+				<SubModuleClassType value="$modulename$.SubModule" />
+				<Tags />
+			</SubModule>
+		</SubModules>
 	<Xmls>
+		<!--  
+     <XmlNode>
+       <XmlName id="Kingdoms" path="vraks_kingdoms"/>
+       <IncludedGameTypes>
+         <GameType value = "Campaign"/>
+         <GameType value = "CampaignStoryMode"/>
+       </IncludedGameTypes>
+     </XmlNode>
+       <XmlNode>
+       <XmlName id="SPCultures" path="vraks_cultures"/>
+       <IncludedGameTypes>
+         <GameType value = "Campaign"/>
+         <GameType value = "CampaignStoryMode"/>
+         <GameType value = "CustomGame"/>
+         <GameType value = "EditorGame"/>
+       </IncludedGameTypes>
+     </XmlNode>-->
 		<XmlNode>
-			<XmlName id="Items" path="beer_item"/>
+			<XmlName id="Monsters" path="40k_monsters"/>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="Items" path="tow_items"/>
 			<IncludedGameTypes>
 				<GameType value = "Campaign"/>
 				<GameType value = "CampaignStoryMode"/>
@@ -34,13 +53,48 @@
 			</IncludedGameTypes>
 		</XmlNode>
 		<XmlNode>
-			<XmlName id="NPCCharacters" path="artisan_brewer_character"/>
+			<XmlName id="WeaponDescriptions" path="40k_weapon_descriptions"/>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="CraftingPieces" path="tow_crafting_pieces"/>
 			<IncludedGameTypes>
 				<GameType value = "Campaign"/>
 				<GameType value = "CampaignStoryMode"/>
 				<GameType value = "CustomGame"/>
-				<GameType value = "EditorGame"/>
 			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="CraftingTemplates" path="tow_crafting_templates"/>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="troopdefinitions_imperium"/>
+			<IncludedGameTypes>
+				<GameType value = "Campaign"/>
+				<GameType value = "CampaignStoryMode"/>
+				<GameType value = "CustomGame"/>
+			</IncludedGameTypes>
+
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="troopdefinitions_chaos"/>
+			<IncludedGameTypes>
+				<GameType value = "Campaign"/>
+				<GameType value = "CampaignStoryMode"/>
+				<GameType value = "CustomGame"/>
+			</IncludedGameTypes>
+
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="custombattlecharacters"/>
+			<IncludedGameTypes>
+				<GameType value = "Campaign"/>
+				<GameType value = "CampaignStoryMode"/>
+				<GameType value = "CustomGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+
+		<XmlNode>
+			<XmlName id="SkeletonScales" path="40k_skeleton_scales"/>
 		</XmlNode>
 	</Xmls>
 </Module>

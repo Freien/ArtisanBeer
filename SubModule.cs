@@ -1,9 +1,8 @@
-﻿using System;
-using TaleWorlds.CampaignSystem;
+﻿using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 
-namespace ArtisanBeer
+namespace SiegeofVraks
 {
     public class SubModule : MBSubModuleBase
     {
@@ -16,15 +15,15 @@ namespace ArtisanBeer
         public override void OnMissionBehaviorInitialize(Mission mission)
         {
             base.OnMissionBehaviorInitialize(mission);
-            mission.AddMissionBehavior(new ArtisanBeerMissionView());
+
+            mission.AddMissionBehavior(new VraksMissionView());
         }
 
         protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
         {
-            base.InitializeGameStarter(game, starterObject);
             if (starterObject is CampaignGameStarter starter)
             {
-                starter.AddBehavior(new ArtisanBeerBehavior());
+                starter.AddBehavior(new VraksBehavior());
             }
         }
     }
